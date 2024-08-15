@@ -1,6 +1,9 @@
 import { IS_PLATFORM } from 'common'
 import { useBranchCommands } from 'components/interfaces/BranchManagement/Branch.Commands'
-import { useSnippetCommands } from 'components/layouts/SQLEditorLayout/SqlEditor.Commands'
+import {
+  useQueryTableCommands,
+  useSnippetCommands,
+} from 'components/layouts/SQLEditorLayout/SqlEditor.Commands'
 import { useGenerateSqlCommand } from 'components/interfaces/SqlGenerator/SqlGenerator.Commands'
 import { useLayoutNavCommands } from 'components/layouts/useLayoutNavCommands'
 import { CommandHeader, CommandInput, CommandList, CommandMenu } from 'ui-patterns/CommandMenu'
@@ -19,6 +22,7 @@ export default function StudioCommandMenu() {
   useApiKeysCommands()
   useApiUrlCommand()
   useProjectSwitchCommand()
+  useQueryTableCommands()
   useBranchCommands()
   useSnippetCommands()
   useLayoutNavCommands()
